@@ -89,6 +89,31 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Container</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/base.html">Base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/container.html">Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/creation.html">Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/data_types.html">Data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/elementwise.html">Elementwise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/gradients.html">Gradients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/linear_algebra.html">Linear algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/losses.html">Losses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/manipulation.html">Manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/random.html">Random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/searching.html">Searching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/set.html">Set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/sorting.html">Sorting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/statistical.html">Statistical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/utility.html">Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../container/wrapping.html">Wrapping</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Functional</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
@@ -230,22 +255,24 @@
 <dd><p>Rolls array elements along a specified axis. Array elements that roll beyond the last position are re-introduced at the first position. Array elements that roll beyond the first position are re-introduced at the last position.
 Parameters
 ———-
-x: array</p>
+x</p>
 <blockquote>
 <div><p>input array.</p>
 </div></blockquote>
 <dl class="simple">
-<dt>shift: Union[int, Tuple[int, …]]</dt><dd><p>number of places by which the elements are shifted. If <code class="docutils literal notranslate"><span class="pre">shift</span></code> is a tuple, then <code class="docutils literal notranslate"><span class="pre">axis</span></code> must be a tuple of the same size, and each of the given axes must be shifted by the corresponding element in <code class="docutils literal notranslate"><span class="pre">shift</span></code>. If <code class="docutils literal notranslate"><span class="pre">shift</span></code> is an <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">axis</span></code> a tuple, then the same <code class="docutils literal notranslate"><span class="pre">shift</span></code> must be used for all specified axes. If a shift is positive, then array elements must be shifted positively (toward larger indices) along the dimension of <code class="docutils literal notranslate"><span class="pre">axis</span></code>. If a shift is negative, then array elements must be shifted negatively (toward smaller indices) along the dimension of <code class="docutils literal notranslate"><span class="pre">axis</span></code>.</p>
+<dt>shift</dt><dd><p>number of places by which the elements are shifted. If <code class="docutils literal notranslate"><span class="pre">shift</span></code> is a tuple, then <code class="docutils literal notranslate"><span class="pre">axis</span></code> must be a tuple of the same size, and each of the given axes must be shifted by the corresponding element in <code class="docutils literal notranslate"><span class="pre">shift</span></code>. If <code class="docutils literal notranslate"><span class="pre">shift</span></code> is an <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">axis</span></code> a tuple, then the same <code class="docutils literal notranslate"><span class="pre">shift</span></code> must be used for all specified axes. If a shift is positive, then array elements must be shifted positively (toward larger indices) along the dimension of <code class="docutils literal notranslate"><span class="pre">axis</span></code>. If a shift is negative, then array elements must be shifted negatively (toward smaller indices) along the dimension of <code class="docutils literal notranslate"><span class="pre">axis</span></code>.</p>
 </dd>
-<dt>axis: Optional[Union[int, Tuple[int, …]]]</dt><dd><p>axis (or axes) along which elements to shift. If <code class="docutils literal notranslate"><span class="pre">axis</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, the array must be flattened, shifted, and then restored to its original shape. Default: <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dt>axis</dt><dd><p>axis (or axes) along which elements to shift. If <code class="docutils literal notranslate"><span class="pre">axis</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, the array must be flattened, shifted, and then restored to its original shape. Default  <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd>
-<dt>out:</dt><dd><p>optional output array, for writing the result to. It must have a shape that the inputs broadcast to.</p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>return: array</dt><dd><p>an output array having the same data type as <code class="docutils literal notranslate"><span class="pre">x</span></code> and whose elements, relative to <code class="docutils literal notranslate"><span class="pre">x</span></code>, are shifted.</p>
+<dt>out</dt><dd><p>optional output array, for writing the result to. It must have a shape that the inputs broadcast to.</p>
 </dd>
 </dl>
+<blockquote>
+<div><dl class="simple">
+<dt>ret</dt><dd><p>an output array having the same data type as <code class="docutils literal notranslate"><span class="pre">x</span></code> and whose elements, relative to <code class="docutils literal notranslate"><span class="pre">x</span></code>, are shifted.</p>
+</dd>
+</dl>
+</div></blockquote>
 </dd></dl>
 
 <div class="line-block">
